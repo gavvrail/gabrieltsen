@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio | Creative Technologist</title>
+    <meta name="description" content="A premium portfolio showcasing my work as a creative technologist.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <header id="navbar">
+        <nav>
+            <a href="#" class="logo">Portfolio.</a>
+            <div class="nav-links">
+                <a href="#about">About</a>
+                <a href="#projects">Projects</a>
+                <a href="#playground">Playground</a>
+            </div>
+            <a href="#contact" class="btn btn-sm">Contact Me</a>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="hero">
+        <div class="hero-bg-blob"></div>
+        <div class="hero-content">
+            <div class="badge fade-in-up">✨ Welcome to my digital garden</div>
+            <h1 class="fade-in-up delay-1">
+                Building Digital <br> Experiences.
+            </h1>
+            <p class="fade-in-up delay-2">
+                I'm a developer passionate about crafting intuitive, dynamic, and beautiful web applications.
+            </p>
+            <div class="hero-actions fade-in-up delay-3">
+                <a href="#projects" class="btn btn-primary">View Projects</a>
+                <a href="#contact" class="btn btn-outline">Contact Me</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about">
+        <div class="container">
+            <h2 class="section-title reveal">About Me</h2>
+            <p class="section-desc reveal delay-1">
+                I am a creative technologist based in the cloud. I love building things that live on the internet, 
+                blending technical expertise with a keen eye for design. My goal is to always build products 
+                that provide pixel-perfect, performant experiences.
+            </p>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects">
+        <div class="container">
+            <h2 class="section-title reveal">Featured Projects</h2>
+            <p class="section-desc reveal">A selection of projects that demonstrate my passion.</p>
+            
+            <div class="projects-grid">
+                <!-- Project 1 -->
+                <div class="card reveal delay-1">
+                    <h3>Project Alpha</h3>
+                    <p>A cutting-edge web application built with AI integration.</p>
+                    <div class="tags">
+                        <span>AI</span><span>Web</span><span>Design</span>
+                    </div>
+                </div>
+                 <!-- Project 2 -->
+                 <div class="card reveal delay-2">
+                    <h3>E-Commerce Hub</h3>
+                    <p>Full-stack solution with real-time inventory management.</p>
+                    <div class="tags">
+                        <span>Commerce</span><span>Real-time</span>
+                    </div>
+                </div>
+                 <!-- Project 3 -->
+                 <div class="card reveal delay-3">
+                    <h3>Task Master</h3>
+                    <p>Productivity tool for managing complex workflows.</p>
+                    <div class="tags">
+                        <span>Productivity</span><span>SaaS</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Playground Section (Interactive Features) -->
+    <section id="playground">
+        <div class="container">
+            <h2 class="section-title reveal">My Playground</h2>
+            <p class="section-desc reveal">Interactive experiments and tools.</p>
+
+            <div class="features-grid">
+                <!-- Feature 1: BMI Calculator -->
+                <div class="card bmi-card reveal delay-1">
+                    <h3>BMI Calculator</h3>
+                    <p>Interactive health check</p>
+                    
+                    <div class="bmi-controls">
+                        <div class="control-group">
+                            <label>Height: <span id="height-val">170</span> cm</label>
+                            <input type="range" id="height" min="100" max="220" value="170">
+                        </div>
+                        <div class="control-group">
+                            <label>Weight: <span id="weight-val">70</span> kg</label>
+                            <input type="range" id="weight" min="30" max="150" value="70">
+                        </div>
+                    </div>
+
+                    <div class="bmi-result">
+                        <div id="bmi-display" class="bmi-value">24.2</div>
+                        <div id="bmi-category" class="bmi-category">Normal Weight</div>
+                    </div>
+                </div>
+
+                <!-- Feature 2: Coming Soon -->
+                <div class="card feature-card reveal delay-2">
+                    <h3>Interactive Canvas</h3>
+                    <p>Use your mouse to interact with the background particles.</p>
+                    <div class="canvas-placeholder">Move Cursor Here (WIP)</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container footer-content">
+            <p>&copy; 2025 Portfolio. All rights reserved.</p>
+            <div class="socials">
+                <a href="#">Twitter</a>
+                <a href="#">GitHub</a>
+                <a href="#">LinkedIn</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
