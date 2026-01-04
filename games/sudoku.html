@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sudoku | Gabriel Tsen</title>
+    <link rel="stylesheet" href="../style.css">
+    <style>
+        .container.game-container {
+            max-width: 600px;
+        }
+
+        .back-btn {
+            display: inline-block;
+            margin-bottom: 2rem;
+            color: var(--text-muted);
+            font-weight: bold;
+        }
+
+        .back-btn:hover {
+            color: var(--primary-color);
+        }
+
+        .sudoku-grid {
+            display: grid;
+            grid-template-columns: repeat(9, 1fr);
+            gap: 1px;
+            background: var(--border-color);
+            border: 2px solid var(--border-color);
+            margin: 2rem auto;
+            max-width: 450px;
+        }
+
+        .sudoku-cell {
+            aspect-ratio: 1;
+            background: var(--card-bg);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+            font-weight: bold;
+            cursor: pointer;
+            width: 100%;
+            height: 100%;
+            border: none;
+            text-align: center;
+            color: var(--text-color);
+        }
+
+        /* Thick borders for 3x3 blocks */
+        .sudoku-cell:nth-child(3n) {
+            border-right: 2px solid var(--border-color);
+        }
+
+        .sudoku-cell:nth-child(9n) {
+            border-right: none;
+        }
+
+        .sudoku-cell:nth-child(n+19):nth-child(-n+27),
+        .sudoku-cell:nth-child(n+46):nth-child(-n+54) {
+            border-bottom: 2px solid var(--border-color);
+        }
+
+        .sudoku-cell input {
+            width: 100%;
+            height: 100%;
+            border: none;
+            background: transparent;
+            text-align: center;
+            font-size: inherit;
+            color: inherit;
+        }
+
+        .sudoku-cell.fixed {
+            background: rgba(0, 0, 0, 0.05);
+        }
+
+        [data-theme="dark"] .sudoku-cell.fixed {
+            background: rgba(255, 255, 255, 0.05);
+        }
+
+        .sudoku-controls {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            margin-top: 2rem;
+        }
+    </style>
+</head>
+
+<body>
+    <header id="navbar">
+        <nav>
+            <a href="../index.html" class="logo">GABRIEL</a>
+            <div class="nav-links">
+                <a href="../index.html#hero">Home</a>
+                <a href="../index.html#about">About</a>
+                <a href="../index.html#journey">My Journey</a>
+                <a href="../index.html#creations">Creations</a>
+                <a href="../playground.html" class="active-link">Playground</a>
+            </div>
+            <a href="../index.html#connect" class="btn btn-sm btn-primary">Connect</a>
+        </nav>
+    </header>
+
+    <section style="padding-top: 150px;">
+        <div class="container game-container">
+            <a href="../playground.html" class="back-btn">← Back to Hub</a>
+
+            <div class="card reveal">
+                <h3>Sudoku</h3>
+                <p>Fill the grid so that every row, column, and 3x3 box contains 1-9.</p>
+
+                <div id="sudoku-board" class="sudoku-grid">
+                    <!-- Configured via JS -->
+                </div>
+
+                <div class="sudoku-controls">
+                    <button id="sudoku-new" class="btn btn-primary">New Game</button>
+                    <button id="sudoku-check" class="btn btn-outline">Check</button>
+                </div>
+                <p id="sudoku-message" style="text-align: center; margin-top: 1rem; min-height: 1.5rem;"></p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container footer-content horizontal-footer">
+            <div class="footer-left">
+                <p class="footer-quote">"The only way to do great work is to love what you do."</p>
+                <p class="copyright">&copy; 2025 Gabriel Tsen. Designed & Built with ❤️.</p>
+            </div>
+
+            <div class="footer-right">
+                <div class="theme-container">
+                    <select id="theme-select" title="Select Theme">
+                        <option value="">☀️ Apple Light (Default)</option>
+                        <option value="dark">🌙 Dark Mode</option>
+                        <option value="game">👾 Game Mode</option>
+                        <option value="christmas">🎄 Christmas</option>
+                        <option value="halloween">🎃 Halloween</option>
+                        <option value="cny">🧧 Lunar New Year</option>
+                    </select>
+                </div>
+                <div class="socials">
+                    <a href="https://github.com/gabrieltsen" target="_blank">GitHub</a>
+                    <span class="separator">|</span>
+                    <a href="https://linkedin.com/in/gabrieltsen" target="_blank">LinkedIn</a>
+                    <span class="separator">|</span>
+                    <a href="mailto:gabrieltsen0831@gmail.com">Email</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="../script.js"></script>
+</body>
+
+</html>

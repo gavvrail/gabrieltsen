@@ -28,167 +28,255 @@
 </head>
 
 <body>
-    <!-- Navbar -->
     <header id="navbar">
         <nav>
             <a href="index.html" class="logo">GABRIEL</a>
             <div class="nav-links">
-                <a href="about.html">About</a>
-                <a href="experience.html">Experience</a>
-                <a href="projects.html">Projects</a>
-                <a href="blog.html">Blog</a>
+                <a href="#hero" class="active-link">Home</a>
+                <a href="#about">About</a>
+                <a href="#journey">My Journey</a>
+                <a href="#creations">Creations</a>
                 <a href="playground.html">Playground</a>
             </div>
-            <a href="about.html#contact" class="btn btn-sm btn-primary">Contact Me</a>
+            <a href="#connect" class="btn btn-sm btn-primary">Connect</a>
         </nav>
     </header>
 
     <!-- Theme Switcher Moved to Footer -->
 
     <!-- Hero Section -->
-    <section id="hero">
-        <div class="hero-bg-blob"></div>
-        <div class="hero-content">
-            <div class="badge fade-in-up">✨ Hello, I am Gabriel Tsen Yi Xiong</div>
-            <h1 class="fade-in-up delay-1">
-                Crafting Digital <br> Experiences.
-            </h1>
-            <p class="fade-in-up delay-2" style="font-size: 1.25rem; color: var(--text-muted); margin-bottom: 2rem;">
-                I transform bold ideas into pixel-perfect reality. A portfolio of passion, precision, and performance.
+    <section id="hero" class="profile-hero">
+        <div class="container">
+            <div class="profile-content">
+                <div class="profile-image-container">
+                    <img src="images/profile_placeholder.png" alt="Gabriel Tsen" class="profile-img">
+                    <div class="status-badge">
+                        <span class="status-dot"></span>
+                        Cooking Code 🍳
+                    </div>
+                </div>
+
+                <h1 class="profile-name">Explorer. Developer. Student.</h1>
+                <h2 class="profile-title">Turning Coffee into Code & Ideas ☕</h2>
+
+                <p class="profile-bio">
+                    I'm a final-year IT student at <strong>TARUMT</strong> based in Sabah.
+                    This is where I document my code, my games, and everything in between.
+                </p>
+
+                <!-- "Now" Widget -->
+                <div class="now-widget reveal">
+                    <span class="now-label">NOW PLAYING:</span>
+                    <span class="now-text">Learning ASP.NET & Grinding Valorant 🎮</span>
+                </div>
+
+                <div class="profile-actions">
+                    <a href="#creations" class="btn btn-primary">See My Stuff</a>
+                    <a href="#journey" class="btn btn-secondary">My Story</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Me (Bento Grid) -->
+    <section id="about" style="padding: 100px 20px;">
+        <div class="container">
+            <h2 class="section-title reveal" style="text-align: center; margin-bottom: 3rem;">Me, in a Grid.</h2>
+
+            <div class="bento-grid reveal delay-1">
+                <!-- Box 1: Profile (Large) -->
+                <div class="bento-card profile-card tilt-card"
+                    style="background-image: url('images/profile.jpg'); background-size: cover; background-position: center;">
+                    <div class="card-overlay">
+                        <h3>Gabriel Tsen</h3>
+                        <p>Developer & Creative</p>
+                    </div>
+                </div>
+
+                <!-- Box 2: Student (Medium) -->
+                <div class="bento-card student-card tilt-card">
+                    <div class="card-icon">🎓</div>
+                    <h3>Final Year Student</h3>
+                    <p>@ TARUMT</p>
+                    <div class="uni-badge">DEI Distinction</div>
+                </div>
+
+                <!-- Box 3: Gamer (Small/Medium) -->
+                <div class="bento-card gamer-card tilt-card">
+                    <div class="controller-icon">
+                        🎮
+                    </div>
+                    <h3>Valorant</h3>
+                    <p>Late Night Grinds</p>
+                </div>
+
+                <!-- Box 4: Tech Stack (Medium) -->
+                <div class="bento-card tech-card tilt-card">
+                    <h3>Tech Stack</h3>
+                    <div class="tech-icons">
+                        <span class="tech-icon floating delay-0">🐍 Python</span>
+                        <span class="tech-icon floating delay-1">🌐 ASP.NET</span>
+                        <span class="tech-icon floating delay-2">⚛️ React</span>
+                        <span class="tech-icon floating delay-3">☕ C#</span>
+                    </div>
+                </div>
+
+                <!-- Box 5: Location (Wide) -->
+                <div class="bento-card location-card tilt-card">
+                    <div class="map-pin">
+                        📍 Sabah, Malaysia
+                    </div>
+                    <div class="live-clock" id="sabah-clock">00:00:00</div>
+                    <p class="time-label">My Local Time</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Milestones (Journey) Section -->
+    <section id="journey">
+        <div class="container">
+            <h2 class="section-title reveal" style="text-align: center;">My Journey</h2>
+            <p class="section-desc reveal delay-1" style="text-align: center; margin: 0 auto 4rem auto;">
+                From "Hello World" to building digital worlds.
             </p>
-            <div class="hero-actions fade-in-up delay-3">
-                <a href="projects.html" class="btn btn-primary">View Projects</a>
-                <a href="about.html" class="btn btn-outline">More About Me</a>
-            </div>
-        </div>
-    </section>
 
-    <!-- Achievements Section -->
-    <section id="achievements" style="background-color: var(--secondary-bg);">
-        <div class="container">
-            <h2 class="section-title reveal" style="text-align: center;">Impact at a Glance</h2>
-            <div class="stats-grid">
-                <div class="stat-item reveal delay-1">
-                    <div class="stat-number">5+</div>
-                    <div class="stat-label">Years Experience</div>
-                </div>
-                <div class="stat-item reveal delay-2">
-                    <div class="stat-number">50+</div>
-                    <div class="stat-label">Projects Shipped</div>
-                </div>
-                <div class="stat-item reveal delay-3">
-                    <div class="stat-number">100%</div>
-                    <div class="stat-label">Client Satisfaction</div>
-                </div>
-                <div class="stat-item reveal delay-4">
-                    <div class="stat-number">10k+</div>
-                    <div class="stat-label">Lines of Code</div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Capabilities Section (Skills) -->
-    <section id="capabilities">
-        <div class="container">
-            <div
-                style="display: flex; flex-direction: column; align-items: center; text-align: center; margin-bottom: 3rem;">
-                <h2 class="section-title reveal">My Capabilities</h2>
-                <p class="section-desc reveal delay-1">The tools and technologies I use to bring products to life.</p>
-            </div>
-
-            <div class="skills-grid">
-                <!-- Row 1 -->
-                <div class="skill-card reveal delay-1">
-                    <span class="skill-icon">⚛️</span>
-                    <h4>React / Next.js</h4>
-                </div>
-                <div class="skill-card reveal delay-2">
-                    <span class="skill-icon">🎨</span>
-                    <h4>Tailwind & CSS</h4>
-                </div>
-                <div class="skill-card reveal delay-3">
-                    <span class="skill-icon">🔷</span>
-                    <h4>TypeScript</h4>
-                </div>
-                <div class="skill-card reveal delay-1">
-                    <span class="skill-icon">🟢</span>
-                    <h4>Node.js</h4>
-                </div>
-                <div class="skill-card reveal delay-2">
-                    <span class="skill-icon">🐍</span>
-                    <h4>Python</h4>
-                </div>
-                <div class="skill-card reveal delay-3">
-                    <span class="skill-icon">☁️</span>
-                    <h4>AWS / Vercel</h4>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Featured Preview -->
-    <section id="featured" style="background-color: var(--secondary-bg);">
-        <div class="container">
-            <div style="display: flex; justify-content: space-between; align-items: end; margin-bottom: 2rem;">
-                <div>
-                    <h2 class="section-title reveal">Selected Works</h2>
-                    <p class="section-desc reveal delay-1" style="margin-bottom: 0;">A tiny glimpse into my recent
-                        projects.</p>
-                </div>
-                <a href="projects.html" class="btn btn-outline reveal delay-2">View All -></a>
-            </div>
-
-            <div class="projects-grid">
-                <div class="card reveal delay-1 slide-in-left">
-                    <h3>Project Alpha</h3>
-                    <p>A cutting-edge web application built with AI integration.</p>
-                    <div class="tags">
-                        <span>AI</span><span>Web</span>
+            <div class="timeline reveal delay-2">
+                <div class="timeline-line"></div>
+                <!-- Item 1 -->
+                <div class="timeline-item left">
+                    <div class="timeline-content">
+                        <span class="date">2026 (Upcoming)</span>
+                        <h3>Internship Journey Begins</h3>
+                        <p style="color: var(--accent-color); font-weight: 500; margin-bottom: 0.5rem;">The Next Chapter
+                        </p>
+                        <p style="margin-bottom: 0;">Ready to apply my skills in the real world. Open to opportunities!
+                        </p>
                     </div>
                 </div>
-                <div class="card reveal delay-2 slide-in-right">
-                    <h3>E-Commerce Hub</h3>
-                    <p>Full-stack solution with real-time inventory management.</p>
-                    <div class="tags">
-                        <span>Commerce</span><span>Real-time</span>
+                <!-- Item 2 -->
+                <div class="timeline-item right">
+                    <div class="timeline-content">
+                        <span class="date">2025</span>
+                        <h3>The 67 Salon Project</h3>
+                        <p style="color: var(--accent-color); font-weight: 500; margin-bottom: 0.5rem;">Campus Project
+                        </p>
+                        <p style="margin-bottom: 0;">Digitized a salon experience with a booking system and modern UI.
+                        </p>
+                    </div>
+                </div>
+                <!-- Item 3 -->
+                <div class="timeline-item left">
+                    <div class="timeline-content">
+                        <span class="date">2025</span>
+                        <h3>Python Group Lead</h3>
+                        <p style="color: var(--accent-color); font-weight: 500; margin-bottom: 0.5rem;">Academic
+                            Presentation</p>
+                        <p style="margin-bottom: 0;">Led the team (Darren, Stanley, Jess) to deliver a killer
+                            presentation on advanced Python concepts.</p>
+                    </div>
+                </div>
+                <!-- Item 4 -->
+                <div class="timeline-item right">
+                    <div class="timeline-content">
+                        <span class="date">2023</span>
+                        <h3>Started Diploma in IT</h3>
+                        <p style="color: var(--accent-color); font-weight: 500; margin-bottom: 0.5rem;">TARUMT Sabah</p>
+                        <p style="margin-bottom: 0;">The official start of my formal coding education.</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Call to Action -->
-    <section style="text-align: center; padding: 100px 20px;">
+    <!-- Creations Gallery (Projects) Section -->
+    <section id="creations" class="featured-projects" style="background-color: var(--secondary-bg);">
         <div class="container">
-            <h2 class="section-title reveal">Ready to start a project?</h2>
+            <h2 class="section-title">Creations</h2>
+            <p class="section-desc reveal delay-1">Things I've built that I'm proud of.</p>
+            <div class="project-grid">
+                <!-- Project 1 -->
+                <div class="project-card">
+                    <div class="project-preview" style="background: linear-gradient(45deg, #FF9A9E, #FECFEE);"></div>
+                    <div class="project-info">
+                        <h3>The 67 Salon</h3>
+                        <p>How I digitized a salon experience. Full booking system overhaul.</p>
+                        <div class="tags">
+                            <span>Web</span><span>System Design</span>
+                        </div>
+                        <a href="#" class="btn-text">See Process →</a>
+                    </div>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="project-card">
+                    <div class="project-preview" style="background: linear-gradient(45deg, #a18cd1, #fbc2eb);"></div>
+                    <div class="project-info">
+                        <h3>E-Commerce Dropshipping</h3>
+                        <p>My experiment with building a Shopify alternative from scratch.</p>
+                        <div class="tags">
+                            <span>Next.js</span><span>Commerce</span>
+                        </div>
+                        <a href="#" class="btn-text">Visit Store →</a>
+                    </div>
+                </div>
+
+                <!-- Project 3 -->
+                <div class="project-card">
+                    <div class="project-preview" style="background: linear-gradient(120deg, #84fab0, #8fd3f4);"></div>
+                    <div class="project-info">
+                        <h3>The Converter Tool</h3>
+                        <p>Solving my own file conversion problems with Python scripting.</p>
+                        <div class="tags">
+                            <span>Python</span><span>Utility</span>
+                        </div>
+                        <a href="#" class="btn-text">View Code →</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Connect Section -->
+    <section id="connect" style="text-align: center; padding: 100px 20px;">
+        <div class="container">
+            <h2 class="section-title reveal">Let's Connect</h2>
             <p class="section-desc reveal delay-1" style="margin: 0 auto 2rem auto;">
-                Let's collaborate and build something amazing together.
+                Have a project idea, a game invite, or just want to chat about tech?
             </p>
-            <a href="about.html#contact" class="btn btn-primary reveal delay-2">Get in Touch</a>
+            <div class="reveal delay-2">
+                <a href="mailto:gabrieltsen0831@gmail.com" class="btn btn-primary">Say Hello</a>
+            </div>
         </div>
     </section>
 
     <!-- Footer -->
     <footer>
-        <div class="container footer-content">
-            <p>&copy; 2025 Gabriel Tsen. All rights reserved.</p>
-            <div class="theme-container">
-                <select id="theme-select" title="Select Theme">
-                    <option value="">☀️ Apple Light (Default)</option>
-                    <option value="dark">🌙 Dark Mode</option>
-                    <option value="game">👾 Game Mode</option>
-                    <option value="christmas">🎄 Christmas</option>
-                    <option value="halloween">🎃 Halloween</option>
-                    <option value="cny">🧧 Lunar New Year</option>
-                </select>
+        <div class="container footer-content horizontal-footer">
+            <div class="footer-left">
+                <p class="footer-quote">"The only way to do great work is to love what you do."</p>
+                <p class="copyright">&copy; 2025 Gabriel Tsen. Designed & Built with ❤️.</p>
             </div>
-            <div class="socials">
-                <a href="https://github.com/gabrieltsen" target="_blank">GitHub</a>
-                <span class="separator">|</span>
-                <a href="https://linkedin.com/in/gabrieltsen" target="_blank">LinkedIn</a>
-                <span class="separator">|</span>
-                <a href="mailto:gabrieltsen0831@gmail.com">gabrieltsen0831@gmail.com</a>
+
+            <div class="footer-right">
+                <div class="theme-container">
+                    <select id="theme-select" title="Select Theme">
+                        <option value="">☀️ Apple Light (Default)</option>
+                        <option value="dark">🌙 Dark Mode</option>
+                        <option value="game">👾 Game Mode</option>
+                        <option value="christmas">🎄 Christmas</option>
+                        <option value="halloween">🎃 Halloween</option>
+                        <option value="cny">🧧 Lunar New Year</option>
+                    </select>
+                </div>
+                <div class="socials">
+                    <a href="https://github.com/gabrieltsen" target="_blank">GitHub</a>
+                    <span class="separator">|</span>
+                    <a href="https://linkedin.com/in/gabrieltsen" target="_blank">LinkedIn</a>
+                    <span class="separator">|</span>
+                    <!-- Explicit Gmail Redirect -->
+                    <a href="mailto:gabrieltsen0831@gmail.com">Email</a>
+                </div>
             </div>
         </div>
     </footer>

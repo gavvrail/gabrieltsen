@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guess the Word | Gabriel Tsen</title>
+    <link rel="stylesheet" href="../style.css">
+    <style>
+        .container.game-container {
+            max-width: 600px;
+        }
+
+        .back-btn {
+            display: inline-block;
+            margin-bottom: 2rem;
+            color: var(--text-muted);
+            font-weight: bold;
+        }
+
+        .back-btn:hover {
+            color: var(--primary-color);
+        }
+
+        .word-display {
+            font-size: 3rem;
+            letter-spacing: 0.5rem;
+            text-align: center;
+            margin: 2rem 0;
+            font-family: monospace;
+        }
+
+        .keyboard-area {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            justify-content: center;
+            margin-top: 2rem;
+        }
+
+        .letter-btn {
+            width: 40px;
+            height: 40px;
+            border: 1px solid var(--border-color);
+            background: var(--card-bg);
+            color: var(--text-color);
+            border-radius: 4px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        .letter-btn:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+            background: var(--bg-color);
+        }
+
+        .letter-btn.correct {
+            background-color: var(--color-green);
+            color: white;
+            border-color: var(--color-green);
+        }
+
+        .letter-btn.wrong {
+            background-color: var(--color-red);
+            color: white;
+            border-color: var(--color-red);
+        }
+
+        .lives-display {
+            text-align: center;
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+        }
+    </style>
+</head>
+
+<body>
+    <header id="navbar">
+        <nav>
+            <a href="../index.html" class="logo">GABRIEL</a>
+            <div class="nav-links">
+                <a href="../index.html#hero">Home</a>
+                <a href="../index.html#about">About</a>
+                <a href="../index.html#journey">My Journey</a>
+                <a href="../index.html#creations">Creations</a>
+                <a href="../playground.html" class="active-link">Playground</a>
+            </div>
+            <a href="../index.html#connect" class="btn btn-sm btn-primary">Connect</a>
+        </nav>
+    </header>
+
+    <section style="padding-top: 150px;">
+        <div class="container game-container">
+            <a href="../playground.html" class="back-btn">← Back to Hub</a>
+
+            <div class="card reveal">
+                <h3>Guess the Word</h3>
+
+                <!-- Stats Section -->
+                <div id="game-stats"
+                    style="margin-bottom: 1.5rem; display: flex; justify-content: space-around; background: var(--bg-color); padding: 15px; border-radius: 12px; font-size: 0.9rem;">
+                    <div style="text-align: center;">
+                        <div style="font-weight: bold; font-size: 1.2rem;" id="stat-played">0</div>
+                        <div style="color: var(--text-muted);">Played</div>
+                    </div>
+                    <div style="text-align: center;">
+                        <div style="font-weight: bold; font-size: 1.2rem; color: var(--color-green);" id="stat-wins">0
+                        </div>
+                        <div style="color: var(--text-muted);">Wins</div>
+                    </div>
+                    <div style="text-align: center;">
+                        <div style="font-weight: bold; font-size: 1.2rem; color: var(--color-red);" id="stat-losses">0
+                        </div>
+                        <div style="color: var(--text-muted);">Losses</div>
+                    </div>
+                </div>
+
+                <!-- Category Selection Screen -->
+                <div id="category-selection" style="text-align: center;">
+                    <p style="margin-bottom: 1.5rem;">Select a category to start:</p>
+                    <div class="category-grid"
+                        style="display: grid; grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); gap: 1rem; margin-top: 1rem;">
+                        <button class="btn btn-outline category-btn" data-category="food">🍔 Food</button>
+                        <button class="btn btn-outline category-btn" data-category="beverage">🥤 Beverage</button>
+                        <button class="btn btn-outline category-btn" data-category="movie">🎬 Movie</button>
+                        <button class="btn btn-outline category-btn" data-category="anime">⛩️ Anime Words</button>
+                        <button class="btn btn-outline category-btn" data-category="other">🤖 Other (AI)</button>
+                    </div>
+                </div>
+
+                <!-- Game Area (Initially Hidden) -->
+                <div id="game-area" style="display: none;">
+                    <div style="text-align: center; margin-bottom: 1rem; color: var(--primary-color);">
+                        Category: <span id="current-category"
+                            style="font-weight: bold; text-transform: uppercase;"></span>
+                    </div>
+
+                    <div class="lives-display">Lives: <span id="lives">6</span> ❤️</div>
+
+                    <div id="word-display" class="word-display">_ _ _ _ _</div>
+
+                    <div id="keyboard-area" class="keyboard-area">
+                        <!-- JS generated A-Z buttons -->
+                    </div>
+
+                    <p id="guess-message"
+                        style="text-align: center; margin-top: 1rem; min-height: 1.5rem; font-weight: bold;"></p>
+                    <div
+                        style="text-align: center; margin-top: 1rem; display: flex; gap: 10px; justify-content: center;">
+                        <button id="guess-reset" class="btn btn-sm btn-outline">Change Category</button>
+                        <button id="guess-next" class="btn btn-sm btn-primary" style="display: none;">Next Word</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container footer-content horizontal-footer">
+            <div class="footer-left">
+                <p class="footer-quote">"The only way to do great work is to love what you do."</p>
+                <p class="copyright">&copy; 2025 Gabriel Tsen. Designed & Built with ❤️.</p>
+            </div>
+
+            <div class="footer-right">
+                <div class="theme-container">
+                    <select id="theme-select" title="Select Theme">
+                        <option value="">☀️ Apple Light (Default)</option>
+                        <option value="dark">🌙 Dark Mode</option>
+                        <option value="game">👾 Game Mode</option>
+                        <option value="christmas">🎄 Christmas</option>
+                        <option value="halloween">🎃 Halloween</option>
+                        <option value="cny">🧧 Lunar New Year</option>
+                    </select>
+                </div>
+                <div class="socials">
+                    <a href="https://github.com/gabrieltsen" target="_blank">GitHub</a>
+                    <span class="separator">|</span>
+                    <a href="https://linkedin.com/in/gabrieltsen" target="_blank">LinkedIn</a>
+                    <span class="separator">|</span>
+                    <a href="mailto:gabrieltsen0831@gmail.com">Email</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="../script.js"></script>
+</body>
+
+</html>

@@ -1,66 +1,56 @@
-# My Personal Portfolio
+# Gabriel Tsen | Creative Technologist
 
-A high-performance, interactive, and completely theme-able portfolio website built with pure **HTML, CSS, and JavaScript**. No frameworks, no build tools, just code.
+[![Live Demo](https://img.shields.io/badge/Live-Demo-brightgreen)](https://gabrieltsen.vercel.app/)
 
-![Portfolio Banner](https://via.placeholder.com/1200x600?text=Portfolio+Preview)
+Access the live website here: **[gabrieltsen.vercel.app](https://gabrieltsen.vercel.app/)**
 
-## ✨ Features
+---
 
--   **🎨 Ultimate Theme System**: Six distinct themes including:
-    -   **Apple Light** (Default Modern)
-    -   **Dark Mode** (Sleek High Contrast)
-    -   **Retro Game** (8-bit Fonts & Pixel Art)
-    -   **Seasonal** (Christmas, Halloween, Lunar New Year)
--   **🕹️ Interactive Playground**:
-    -   **Tic Tac Toe vs AI**: Unbeatable Minimax Algorithm (Extreme Mode).
-    -   **BMI Calculator**: Real-time health metrics.
-    -   **Particle Canvas**: Interactive background effects.
--   **⚡ Zero Dependencies**: Built completely from scratch for maximum performance.
--   **📱 Fully Responsive**: Optimized for Desktop, Tablet, and Mobile.
+## 📖 About This Project
+
+This is my personal portfolio website, designed to be a digital playground where I showcase my coding journey, projects, and creative experiments. It is built as a **Single Page Application (SPA)** feel using vanilla technologies, focusing on high performance, interactivity, and a premium user experience.
+
+The site is designed to be "fun yet professional," featuring gamified elements like a theme switcher and an interactive playground.
+
+## ✨ Key Features
+
+-   **🎨 Dynamic Theme System**: A robust theme switcher with 6+ modes including Apple Light, Dark Mode, Retro Game, and Seasonal themes (Christmas, Halloween, CNY).
+-   **🍱 Bento Grid Layout**: A modern, responsive grid layout for the "About Me" section.
+-   **🕹️ Interactive Playground**: A dedicated section for mini-games and tools:
+    -   **Wordle**: A clone of the popular word game.
+    -   **Sudoku**: Classic number puzzle.
+    -   **Tic Tac Toe**: Play against an "Impossible" AI (Minimax algorithm).
+-   **⏳ Animated Journey Timeline**: A scroll-triggered timeline visualization of my education and career milestones.
+-   **⚡ Zero External Frameworks**: Built entirely with native HTML5, CSS3, and JavaScript for raw performance and learning.
 
 ## 🛠️ Technology Stack
 
--   **HTML5**: Semantic structure.
--   **CSS3**: Custom variables, Grid/Flexbox, and keyframe animations.
--   **JavaScript (ES6+)**: Game logic, DOM manipulation, and state management.
-
-## 🚀 How to Run Locally
-
-You don't need `npm` or `yarn`! This is a static site.
-
-1.  **Clone the repository:**
-    ```bash
-    git clone https://github.com/yourusername/portfolio.git
-    ```
-2.  **Open the file:**
-    -   Navigate to the folder.
-    -   Double-click `index.html`.
-    -   *Recommended: Open with VS Code "Live Server" extension for the best experience.*
+-   **Frontend**: HTML5, CSS3 (Variables, Flexbox, Grid), JavaScript (ES6+).
+-   **Deployment**: Vercel.
 
 ## 📂 Project Structure
 
-```
+```bash
 /
-├── index.html       # Homepage (Skills, Stats, Featured)
-├── about.html       # Personal Bio & Contact
-├── projects.html    # Full Project List
-├── experience.html  # Timeline of Work History
-├── blog.html        # Articles & Thoughts
-├── playground.html  # Interactive Games & Tools
-├── style.css        # Global Styles, Themes, Animations
-├── script.js        # Logic for Themes, AI, Particles
-└── README.md        # Documentation
+├── index.html          # Main landing page (Home, About, Journey, Creations)
+├── blog.html           # Blog listing page
+├── playground.html     # Hub for interactive games
+├── games/              # Individual game pages
+│   ├── wordle.html
+│   ├── sudoku.html
+│   └── tictactoe.html
+├── style.css           # Global styles and theme definitions
+├── script.js           # Core logic (Navigation, Themes, Animations)
+└── vercel.json         # Deployment configuration
 ```
 
-## 🎮 Game AI Controls
+## 🚀 Usage
 
-In the **Playground**, you can challenge the AI in Tic Tac Toe:
--   **Easy**: Plays randomly.
--   **Extreme**: Uses a Minimax algorithm. It is mathematically impossible to beat. Best of luck!
+You do not need to clone this repo to view the portfolio. Simply visit the [Live Link](https://gabrieltsen.vercel.app/).
 
-## 📄 License
-
-This project is open source and available under the [MIT License](LICENSE).
+If you wish to run it locally:
+1.  Clone the repo.
+2.  Open `index.html` in your browser (or use VS Code Live Server).
 
 ---
-*Created by Gabriel Tsen*
+*Built with ❤️ by Gabriel Tsen*

@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tic Tac Toe | Gabriel Tsen</title>
+    <link rel="stylesheet" href="../style.css">
+    <style>
+        .container.game-container {
+            max-width: 600px;
+        }
+
+        .back-btn {
+            display: inline-block;
+            margin-bottom: 2rem;
+            color: var(--text-muted);
+            font-weight: bold;
+        }
+
+        .back-btn:hover {
+            color: var(--primary-color);
+        }
+    </style>
+</head>
+
+<body>
+    <header id="navbar">
+        <nav>
+            <a href="../index.html" class="logo">GABRIEL</a>
+            <div class="nav-links">
+                <a href="../index.html#hero">Home</a>
+                <a href="../index.html#about">About</a>
+                <a href="../index.html#journey">My Journey</a>
+                <a href="../index.html#creations">Creations</a>
+                <a href="../playground.html" class="active-link">Playground</a>
+            </div>
+            <a href="../index.html#connect" class="btn btn-sm btn-primary">Connect</a>
+        </nav>
+    </header>
+
+    <section style="padding-top: 150px;">
+        <div class="container game-container">
+            <a href="../playground.html" class="back-btn">← Back to Hub</a>
+
+            <div class="card ttt-card reveal">
+                <h3>Tic Tac Toe (vs AI)</h3>
+                <p>Can you beat the Extreme AI?</p>
+
+                <div class="ttt-stats">
+                    <div class="ttt-stat-item">
+                        <div id="stat-played" class="ttt-stat-number">0</div>
+                        <div class="ttt-stat-label">Played</div>
+                    </div>
+                    <div class="ttt-stat-item">
+                        <div id="stat-won" class="ttt-stat-number">0</div>
+                        <div class="ttt-stat-label">Won</div>
+                    </div>
+                    <div class="ttt-stat-item">
+                        <div id="stat-lost" class="ttt-stat-number">0</div>
+                        <div class="ttt-stat-label">Lost</div>
+                    </div>
+                    <div class="ttt-stat-item">
+                        <div id="stat-wr" class="ttt-stat-number">0%</div>
+                        <div class="ttt-stat-label">Win Rate</div>
+                    </div>
+                </div>
+
+                <div id="ttt-board" class="ttt-grid">
+                    <div class="ttt-cell" data-index="0"></div>
+                    <div class="ttt-cell" data-index="1"></div>
+                    <div class="ttt-cell" data-index="2"></div>
+                    <div class="ttt-cell" data-index="3"></div>
+                    <div class="ttt-cell" data-index="4"></div>
+                    <div class="ttt-cell" data-index="5"></div>
+                    <div class="ttt-cell" data-index="6"></div>
+                    <div class="ttt-cell" data-index="7"></div>
+                    <div class="ttt-cell" data-index="8"></div>
+                </div>
+
+                <div class="ttt-controls">
+                    <div id="ttt-status">Your Turn (X)</div>
+                    <select id="difficulty-select">
+                        <option value="easy">Easy (Random)</option>
+                        <option value="medium">Medium</option>
+                        <option value="hard">Hard</option>
+                        <option value="extreme">Extreme (Unbeatable)</option>
+                    </select>
+                    <button id="ttt-reset" class="btn btn-sm btn-outline">Reset Game</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container footer-content horizontal-footer">
+            <div class="footer-left">
+                <p class="footer-quote">"The only way to do great work is to love what you do."</p>
+                <p class="copyright">&copy; 2025 Gabriel Tsen. Designed & Built with ❤️.</p>
+            </div>
+
+            <div class="footer-right">
+                <div class="theme-container">
+                    <select id="theme-select" title="Select Theme">
+                        <option value="">☀️ Apple Light (Default)</option>
+                        <option value="dark">🌙 Dark Mode</option>
+                        <option value="game">👾 Game Mode</option>
+                        <option value="christmas">🎄 Christmas</option>
+                        <option value="halloween">🎃 Halloween</option>
+                        <option value="cny">🧧 Lunar New Year</option>
+                    </select>
+                </div>
+                <div class="socials">
+                    <a href="https://github.com/gabrieltsen" target="_blank">GitHub</a>
+                    <span class="separator">|</span>
+                    <a href="https://linkedin.com/in/gabrieltsen" target="_blank">LinkedIn</a>
+                    <span class="separator">|</span>
+                    <a href="mailto:gabrieltsen0831@gmail.com">Email</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="../script.js"></script>
+</body>
+
+</html>
