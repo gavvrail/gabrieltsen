@@ -667,3 +667,21 @@ if (wordDisplay) {
     loadStats();
     showCategories(); // Init state
 }
+
+// --- FEATURE: Local Time Clock (Sabah UTC+8) ---
+const clockEl = document.getElementById('sabah-clock');
+if (clockEl) {
+    function updateClock() {
+        const now = new Date();
+        const timeString = now.toLocaleTimeString('en-US', {
+            timeZone: 'Asia/Kuala_Lumpur',
+            hour12: true,
+            hour: 'numeric',
+            minute: '2-digit',
+            second: '2-digit'
+        });
+        clockEl.textContent = timeString;
+    }
+    updateClock();
+    setInterval(updateClock, 1000);
+}

@@ -187,9 +187,10 @@
     font-size: 3.5rem;
     margin: 0;
     background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+    background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    animation: blur-in 1.2s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+    animation: blur-in 1.2s cubic-bezier(0.16, 1, 0.3, 1) forwards;
     opacity: 0;
     /* Start hidden for animation */
 }
@@ -663,7 +664,8 @@ footer {
     padding: 12px 24px;
     border-radius: var(--btn-radius);
     font-weight: 600;
-    transition: all 0.2s ease;
+    font-weight: 600;
+    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
     cursor: pointer;
     border: var(--border-width) var(--border-style) transparent;
     font-family: var(--font-header);
@@ -1134,7 +1136,7 @@ h1 {
 .reveal {
     opacity: 0;
     transform: translateY(40px);
-    transition: all 0.8s cubic-bezier(0.5, 0, 0, 1);
+    transition: all 1s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .reveal.active {
@@ -1186,6 +1188,21 @@ h1 {
     animation-delay: 0.3s;
 }
 
+.delay-4 {
+    transition-delay: 0.4s;
+    animation-delay: 0.4s;
+}
+
+.delay-5 {
+    transition-delay: 0.5s;
+    animation-delay: 0.5s;
+}
+
+.delay-6 {
+    transition-delay: 0.6s;
+    animation-delay: 0.6s;
+}
+
 /* Timeline specific */
 .timeline {
     position: relative;
@@ -1214,7 +1231,7 @@ h1 {
     /* The animated fill line */
     position: absolute;
     width: 4px;
-    background: var(--primary-color);
+    background: linear-gradient(to bottom, var(--accent-color), var(--primary-color));
     top: 0;
     left: 50%;
     margin-left: -2px;
@@ -1224,7 +1241,7 @@ h1 {
     /* Above the static line */
     transition: height 0.1s linear;
     border-radius: 4px;
-    box-shadow: 0 0 15px var(--primary-color);
+    box-shadow: 0 0 15px var(--accent-color);
     /* Stronger glow */
 }
 
@@ -1240,6 +1257,8 @@ h1 {
     /* Authentic spring-like ease */
     filter: blur(5px);
     /* Start slightly blurred */
+    z-index: 2;
+    /* Ensure items (and dots) are above the line (z-index: 1) */
 }
 
 .timeline-item.active {
@@ -1262,7 +1281,7 @@ h1 {
     position: absolute;
     width: 20px;
     height: 20px;
-    background: var(--bg-color);
+    background: var(--card-bg);
     border: 4px solid var(--border-color);
     /* Inactive color */
     border-radius: 50%;
@@ -1273,18 +1292,21 @@ h1 {
 }
 
 .timeline-item.active::after {
-    background: var(--primary-color);
-    border-color: var(--primary-color);
-    box-shadow: 0 0 15px var(--primary-color);
+    background: var(--accent-color);
+    border-color: var(--accent-color);
+    box-shadow: 0 0 15px var(--accent-color);
     transform: scale(1.2);
+    z-index: 10;
 }
 
 .timeline-item.left::after {
-    right: -10px;
+    right: -14px;
+    /* Half of 28px width (20px + 4px + 4px border) */
 }
 
 .timeline-item.right::after {
-    left: -10px;
+    left: -14px;
+    /* Half of 28px width */
 }
 
 [data-theme="game"] .timeline-item::after {

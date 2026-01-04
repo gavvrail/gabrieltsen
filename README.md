@@ -14,7 +14,7 @@ The site is designed to be "fun yet professional," featuring gamified elements l
 
 ## ✨ Key Features
 
--   **🎨 Dynamic Theme System**: A robust theme switcher with 6+ modes including Apple Light, Dark Mode, Retro Game, and Seasonal themes (Christmas, Halloween, CNY).
+-   **🎨 Dynamic Theme System**: A robust theme switcher with 6+ modes including Apple Light, Dark Mode, Retro Mode, and Seasonal themes (Christmas, Halloween, CNY).
 -   **🍱 Bento Grid Layout**: A modern, responsive grid layout for the "About Me" section.
 -   **🕹️ Interactive Playground**: A dedicated section for mini-games and tools:
     -   **Wordle**: A clone of the popular word game.

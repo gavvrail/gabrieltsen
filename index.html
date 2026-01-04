@@ -49,29 +49,26 @@
         <div class="container">
             <div class="profile-content">
                 <div class="profile-image-container">
-                    <img src="images/profile_placeholder.png" alt="Gabriel Tsen" class="profile-img">
-                    <div class="status-badge">
-                        <span class="status-dot"></span>
-                        Cooking Code 🍳
-                    </div>
+                    <img src="images/avatar.jpg" alt="Gabriel Tsen" class="profile-img"
+                        onerror="this.src='https://ui-avatars.com/api/?name=Gabriel+Tsen&background=random'">
                 </div>
 
-                <h1 class="profile-name">Explorer. Developer. Student.</h1>
-                <h2 class="profile-title">Turning Coffee into Code & Ideas ☕</h2>
+                <h1 class="profile-name">Explorer. Developer. Engineer.</h1>
+                <h2 class="profile-title">Turning Coffee into Clean Code ☕</h2>
 
                 <p class="profile-bio">
                     I'm a final-year IT student at <strong>TARUMT</strong> based in Sabah.
-                    This is where I document my code, my games, and everything in between.
+                    This is where I document my code, my projects, and my journey in tech.
                 </p>
 
                 <!-- "Now" Widget -->
                 <div class="now-widget reveal">
-                    <span class="now-label">NOW PLAYING:</span>
-                    <span class="now-text">Learning ASP.NET & Grinding Valorant 🎮</span>
+                    <span class="now-label">CURRENT FOCUS:</span>
+                    <span class="now-text">Mastering ASP.NET Core & Cloud Architecture ☁️</span>
                 </div>
 
                 <div class="profile-actions">
-                    <a href="#creations" class="btn btn-primary">See My Stuff</a>
+                    <a href="#creations" class="btn btn-primary">See My Work</a>
                     <a href="#journey" class="btn btn-secondary">My Story</a>
                 </div>
             </div>
@@ -86,11 +83,7 @@
             <div class="bento-grid reveal delay-1">
                 <!-- Box 1: Profile (Large) -->
                 <div class="bento-card profile-card tilt-card"
-                    style="background-image: url('images/profile.jpg'); background-size: cover; background-position: center;">
-                    <div class="card-overlay">
-                        <h3>Gabriel Tsen</h3>
-                        <p>Developer & Creative</p>
-                    </div>
+                    style="background-image: url('images/avatar.jpg'); background-size: cover; background-position: center;">
                 </div>
 
                 <!-- Box 2: Student (Medium) -->
@@ -101,13 +94,14 @@
                     <div class="uni-badge">DEI Distinction</div>
                 </div>
 
-                <!-- Box 3: Gamer (Small/Medium) -->
+                <!-- Box 3: Professional (Small/Medium) -->
                 <div class="bento-card gamer-card tilt-card">
+                    <!-- Class name kept for layout structure, content changed -->
                     <div class="controller-icon">
-                        🎮
+                        🚀
                     </div>
-                    <h3>Valorant</h3>
-                    <p>Late Night Grinds</p>
+                    <h3>Full Stack</h3>
+                    <p>Building Scalable Apps</p>
                 </div>
 
                 <!-- Box 4: Tech Stack (Medium) -->
@@ -124,10 +118,55 @@
                 <!-- Box 5: Location (Wide) -->
                 <div class="bento-card location-card tilt-card">
                     <div class="map-pin">
-                        📍 Sabah, Malaysia
+                        📍 Malaysia
                     </div>
                     <div class="live-clock" id="sabah-clock">00:00:00</div>
                     <p class="time-label">My Local Time</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Capabilities Section (New) -->
+    <section id="capabilities" style="background-color: var(--secondary-bg);">
+        <div class="container">
+            <h2 class="section-title reveal" style="text-align: center;">What I Do</h2>
+            <p class="section-desc reveal delay-1" style="text-align: center; margin: 0 auto 4rem auto;">
+                Bridging the gap between design and engineering.
+            </p>
+
+            <div class="bento-grid reveal delay-2"
+                style="grid-template-columns: repeat(3, 1fr); grid-template-rows: auto;">
+                <!-- Card 1 -->
+                <div class="bento-card tilt-card"
+                    style="grid-column: span 1; text-align: center; padding: 2.5rem 1.5rem;">
+                    <div style="font-size: 3rem; margin-bottom: 1rem;">🎨</div>
+                    <h3>Frontend Architecture</h3>
+                    <p style="color: var(--text-muted); font-size: 0.95rem;">
+                        crafting responsive, accessible, and performant user interfaces using modern CSS and efficient
+                        logic.
+                    </p>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="bento-card tilt-card"
+                    style="grid-column: span 1; text-align: center; padding: 2.5rem 1.5rem;">
+                    <div style="font-size: 3rem; margin-bottom: 1rem;">⚙️</div>
+                    <h3>Backend Engineering</h3>
+                    <p style="color: var(--text-muted); font-size: 0.95rem;">
+                        Building robust APIs, designing scalable database schemas, and ensuring secure data handling.
+                    </p>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="bento-card tilt-card"
+                    style="grid-column: span 1; text-align: center; padding: 2.5rem 1.5rem;">
+                    <div style="font-size: 3rem; margin-bottom: 1rem;">☁️</div>
+                    <h3>System Design</h3>
+                    <p style="color: var(--text-muted); font-size: 0.95rem;">
+                        Planning cloud-ready architectures with a focus on maintainability, scalability, and
+                        optimization.
+                    </p>
                 </div>
             </div>
         </div>
@@ -263,7 +302,7 @@
                     <select id="theme-select" title="Select Theme">
                         <option value="">☀️ Apple Light (Default)</option>
                         <option value="dark">🌙 Dark Mode</option>
-                        <option value="game">👾 Game Mode</option>
+                        <option value="game">👾 Retro Mode</option>
                         <option value="christmas">🎄 Christmas</option>
                         <option value="halloween">🎃 Halloween</option>
                         <option value="cny">🧧 Lunar New Year</option>
